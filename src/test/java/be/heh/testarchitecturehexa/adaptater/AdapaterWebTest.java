@@ -41,8 +41,7 @@ public class AdapaterWebTest {
         students.add(new Student("tata2","titi2", LocalDate.of(2012,05,26)));
 
         //Stub
-        Mockito.when(studentListUseCase.getStudentList())
-                .thenReturn(students);
+        Mockito.when(studentListUseCase.getStudentList()).thenReturn(students);
 
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
